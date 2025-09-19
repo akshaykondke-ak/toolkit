@@ -1,0 +1,159 @@
+
+    <!doctype html>
+    <html>
+    <head>
+      <meta charset="utf-8"/>
+      <title>Pentoolkit Summary - rivedix.com</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <style>
+        :root{
+          --bg:#f7fafc; --card:#ffffff; --muted:#6b7280; --brand:#2563eb;
+          --accent:#111827; --success:#059669;
+        }
+        body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); margin:0; padding:24px; color:var(--accent)}
+        .container{max-width:1100px;margin:0 auto}
+        header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+        h1{margin:0;font-size:1.4rem}
+        .meta{color:var(--muted)}
+        .modules{display:flex;flex-direction:column;gap:12px}
+        .card{background:var(--card);border-radius:10px;box-shadow:0 4px 14px rgba(16,24,40,0.06);padding:14px;border:1px solid #e6eef8}
+        .card h2{margin:0;font-size:1.05rem;display:flex;justify-content:space-between;align-items:center}
+        .badge{background:#eef2ff;color:#1e3a8a;padding:4px 8px;border-radius:6px;font-size:0.85rem}
+        .meta-row{display:flex;gap:12px;align-items:center;color:var(--muted);margin-top:6px}
+        table{border-collapse:collapse;width:100%;margin-top:8px}
+        th,td{padding:8px;border:1px solid #eef2f6;text-align:left;font-size:0.95rem}
+        th{background:#fbfdff}
+        .small{font-size:0.9rem;color:var(--muted)}
+        .toggle{cursor:pointer; user-select:none}
+        .collapsible{max-height:0;overflow:hidden;transition:max-height .28s ease}
+        .collapsible.open{max-height:2000px;transition:max-height .45s cubic-bezier(.2,.9,.2,1)}
+        .whois-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+        pre.raw{background:#0f1724;color:#e6eef8;padding:12px;border-radius:8px;overflow:auto;max-height:320px}
+        .right{display:flex;gap:8px;align-items:center}
+        .muted-pill{background:#f1f5f9;color:#475569;padding:6px 8px;border-radius:999px;font-size:0.85rem}
+        .link{color:var(--brand);text-decoration:none}
+        @media (max-width:700px){ .whois-grid{grid-template-columns:1fr} }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <header>
+          <div>
+            <h1>Pentoolkit — Aggregated Report</h1>
+            <div class="meta small">Target: <strong>rivedix.com</strong> &nbsp;•&nbsp; Generated: 2025-09-17 12:28:10 UTC</div>
+          </div>
+          <div class="right small"><span class="muted-pill">Reports: 1</span></div>
+        </header>
+
+        
+        <div class="card">
+          <strong>Raw files</strong>
+          <div class="small" style="margin-top:6px;">
+            
+              <div><a class="link" href="rivedix.com_web_recon_20250917_121504.html">rivedix.com_web_recon_20250917_121504.html</a></div>
+            
+          </div>
+        </div>
+        
+
+        <div class="modules">
+          
+          <div class="card">
+            <h2>
+              <span>WEB <span class="small">(2 run(s))</span></span>
+              <span class="right">
+                <span class="badge">Module</span>
+                <span style="width:12px"></span>
+                <span class="toggle" data-target="mod-0">▾</span>
+              </span>
+            </h2>
+
+            <div id="mod-0" class="collapsible">
+              
+                <div style="margin-top:12px">
+                  <div class="small">Report file: <code>rivedix.com_web_recon_20250917_121503.json</code></div>
+
+                  
+
+                  
+                  
+
+                  
+                  
+
+                  
+                  
+
+                  
+                  
+
+                  
+                  
+                    <div class="small" style="margin-top:8px">Keys: ['commandline', 'time', 'results', 'config']</div>
+                  
+
+                </div>
+                <hr/>
+              
+                <div style="margin-top:12px">
+                  <div class="small">Report file: <code>rivedix.com_web_recon_20250917_121504.json</code></div>
+
+                  
+
+                  
+                  
+
+                  
+                  
+
+                  
+                  
+
+                  
+                  
+
+                  
+                  
+                    <div class="small" style="margin-top:8px">Keys: ['commandline', 'time', 'results', 'config']</div>
+                  
+
+                </div>
+                <hr/>
+              
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+
+      <script>
+        // toggles for module cards
+        document.querySelectorAll('.toggle').forEach(function(t){
+          t.addEventListener('click', function(){
+            const id = t.getAttribute('data-target');
+            const el = document.getElementById(id);
+            if(!el) return;
+            const open = el.classList.toggle('open');
+            t.textContent = open ? '▾' : '▸';
+            // ensure that when opening we set a big max-height (handled by CSS)
+          });
+        });
+
+        // toggles for raw blocks
+        document.querySelectorAll('.toggle-raw').forEach(function(b){
+          b.addEventListener('click', function(){
+            const id = b.getAttribute('data-target');
+            const el = document.getElementById(id);
+            if(!el) return;
+            el.classList.toggle('open');
+          });
+        });
+
+        // Open the first module by default
+        const first = document.querySelector('.collapsible');
+        if(first) first.classList.add('open');
+      </script>
+    </body>
+    </html>
+    
